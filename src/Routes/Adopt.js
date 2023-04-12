@@ -21,7 +21,7 @@ const Adopt = () => {
   useEffect(() => {
     const fetchPets = async () => {
       try{
-        const response = await axios.get('http://eulerity-hackathon.appspot.com/pets')
+        const response = await axios.get('https://eulerity-hackathon.appspot.com/pets')
         // dispatch(setPets(response.data))
         setPets(response.data.map((pet, index) => ({...pet, id: index, isSelected: false})))
       } catch (error) {
@@ -161,7 +161,7 @@ const Adopt = () => {
         <Wrapper>
           {memoSelectedPets.map((pet, id) => (
             <SelectedContainer>
-              <PetTitle key={id} fontSize='.8em'  mobileDisplay='none' fontWeight='bold' >
+              <PetTitle key={id} fontSize='.8em' mobileDisplay='none' fontWeight='bold' >
               {pet.title}
               </PetTitle>
               <RemoveSelected onClick={() => removeSelected(pet.id)}></RemoveSelected>

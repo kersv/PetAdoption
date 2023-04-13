@@ -4,16 +4,19 @@ import { useDispatch, useSelector } from "react-redux"
 import { setCurrentUser } from "../Redux/user"
 import { signInWithGooglePopup } from "../Firebase/firebase.utils"
 import { useNavigate } from "react-router-dom"
+import { useEffect } from "react"
 
 
 const Auth = () => {
   const dispatch = useDispatch()
   const {userName} = useSelector(state => state.user)
-  
-  let navigate = useNavigate()
-  if(userName) {
-    navigate('/adopt')
-  }
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(userName) {
+      navigate('/adopt')
+    }
+  }, [userName, navigate])
 
   const signInWithGoogle = async () => {
     try{

@@ -4,7 +4,7 @@ import userReducer from './user'
 
 export default configureStore({
   reducer: {
-    pets: petsReducer,
-    user: userReducer
+    user: userReducer,
+    pets: petsReducer
   }
 })

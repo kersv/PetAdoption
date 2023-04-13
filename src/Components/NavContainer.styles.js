@@ -54,11 +54,10 @@ margin-left: 1em;
 border-radius: 2em;
 transition: color 1s;
 font-weight: bold;
-
+background-color: ${props => props.backgroundcolor};
 &:hover{
   color: #009178;
 }
-
 @media screen and (max-width: 800px){
   display: none;
 }
@@ -102,8 +101,6 @@ export const DropdownLinksContainer = styled.div`
   padding: 1em;
   animation: ${slideDownNav} 1.5s ease-in-out;
 
-  
-
   ${NavLink} {
     display: block;
     margin: 1em 0;
@@ -124,4 +121,32 @@ export const DropdownLinksContainer = styled.div`
     animation: ${props => props.showMenu ? slideDownNav : 'none'} 1.5s ease-in-out;
 
   }
+`
+const scaleIn = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+`
+
+export const LogOutButton = styled.button`
+background-color: white;
+padding: ${props => props.padding};
+border-radius: 2em;
+border: none;
+color: #1E2E3B;
+cursor: pointer;
+margin-left: 1em;
+font-weight: bold;
+font-size: 16px;
+
+&:hover,
+  &:active {
+    animation: ${scaleIn} 1s ease-in-out;
+}
 `

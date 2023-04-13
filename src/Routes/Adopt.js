@@ -2,14 +2,10 @@ import { AdoptContainer, FilterContainer, PetGridContainer, PetGrid, PetCard, Pe
 import { useState, useEffect, useMemo } from "react"
 import axios from 'axios';
 import { saveAs } from 'file-saver';
-// import { useDispatch, useSelector } from "react-redux"
-// import { setPets} from '../Redux/animals';
-
 
 
 const Adopt = () => {
-  // const {pets} = useSelector((state) => state.pets)
-  // const dispatch = useDispatch()
+ 
   
   
   const [pets, setPets] = useState([])
@@ -22,7 +18,7 @@ const Adopt = () => {
     const fetchPets = async () => {
       try{
         const response = await axios.get('https://eulerity-hackathon.appspot.com/pets')
-        // dispatch(setPets(response.data))
+        
         setPets(response.data.map((pet, index) => ({...pet, id: index, isSelected: false})))
       } catch (error) {
         console.log(error)
@@ -36,14 +32,14 @@ const Adopt = () => {
     const newFilteredPets = pets.filter((pet) => {
       return pet.title.toLowerCase().includes(searchField) || pet.description.toLowerCase().includes(searchField)
     })
-    // dispatch(setFilteredPets(newFilteredPets))
+    
     setFilteredPets(newFilteredPets)
   }, [pets, searchField])
 
   
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLowerCase();
-    // dispatch(setSearchField(searchFieldString))
+    
     setSearchField(searchFieldString)
     
   }
@@ -148,9 +144,6 @@ const Adopt = () => {
   
   return (
     <AdoptContainer>
-      {console.log(pets)}
-      {console.log(selectedPets)}
-
       <FilterContainer>
         <SearchInput type='search' placeholder="Title or description" onChange={(event) => onSearchChange(event)}/>
         <DownloadSelected onClick={() => groupDownload(selectedPets)}>Download Images</DownloadSelected>

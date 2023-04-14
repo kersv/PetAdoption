@@ -1,4 +1,4 @@
-import { AdoptContainer, FilterContainer, PetGridContainer, PetGrid, PetCard, PetImage, PetTitle, PetDesc, TextContainer, ButtonContainer, DescriptionWrapper, PhotoMinus, PhotoPlus, Download, SearchInput, SelectAllButton, ClearAllButton, DownloadSelected, ImageContainer, SelectedContainer, RemoveSelected, Wrapper} from "../Components/AdoptContainer.styles"
+import { AdoptContainer, FilterContainer, PetGridContainer, PetGrid, PetCard, PetImage, PetTitle, PetDesc, TextContainer, ButtonContainer, DescriptionWrapper, PhotoMinus, PhotoPlus, Download, SearchInput, SelectAllButton, ClearAllButton, DownloadSelected, ImageContainer, SelectedContainer, RemoveSelected, Wrapper} from "../Components/Styles/AdoptContainer.styles"
 import { useState, useEffect, useMemo } from "react"
 import axios from 'axios';
 import { saveAs } from 'file-saver';

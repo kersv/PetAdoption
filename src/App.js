@@ -4,7 +4,7 @@ import Adopt from './Routes/Adopt'
 import Auth from './Routes/Auth'
 import { Route, createBrowserRouter,createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import Navigation from './Routes/Navigation';
-import {AppContainer} from './Components/AppContainer.styles'
+import {AppContainer} from './Components/Styles/AppContainer.styles'
 
 function App() {
   const router = createBrowserRouter(

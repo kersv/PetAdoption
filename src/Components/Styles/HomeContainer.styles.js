@@ -5,7 +5,6 @@ import styled, { keyframes } from "styled-components"
 export const HomeContainer = styled.div`
 display: flex;
 flex-direction: row;
-/* border: 1px solid white; */
 padding: 1em 0;
 height: 100vh;
 
@@ -14,14 +13,14 @@ height: 100vh;
 }
 `
 const fadeInText = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+0% {
+  opacity: 0;
+  transform: translateY(50px);
+}
+100% {
+  opacity: 1;
+  transform: translateY(0);
+}
 `
 
 export const TextContainer = styled.div`
@@ -49,7 +48,6 @@ margin-top: ${props => props.marginTop};
 color: #1E2E3B;
 width: ${props => props.width};
 font-weight: ${props => props.fontWeight};
-/* padding-left: 1em; */
 
 @media screen and (max-width: 800px){
   font-size: ${props => props.fontSizeMobile};
@@ -59,15 +57,15 @@ font-weight: ${props => props.fontWeight};
 `
 
 const scaleIn = keyframes`
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
+0% {
+  transform: scale(1);
+}
+50% {
+  transform: scale(1.2);
+}
+100% {
+  transform: scale(1);
+}
 `
 
 export const AdoptButton = styled(Link)`
@@ -99,14 +97,14 @@ svg{
 `
 
 const fadeInImage = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+0% {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+100% {
+  opacity: 1;
+  transform: translateY(0);
+}
 `
 
 export const ImageContainer = styled.div`
@@ -117,9 +115,6 @@ justify-content: center;
 align-items: center;
 height: 100%;
 animation: ${fadeInImage} 1s ease-in-out;
-
-
-
 @media screen and (max-width: 800px){
   flex: 3;
 }
@@ -131,7 +126,6 @@ display: grid;
 /* border: 1px solid white; */
 justify-items: center;
 position: relative;
-
 
 `
 
@@ -145,9 +139,8 @@ z-index: 1;
 border-radius: 1em;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
-
-
 `
+
 export const Image2 = styled.img`
 z-index: 2;
 grid-column: 1 / span 6;

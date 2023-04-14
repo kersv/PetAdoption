@@ -1,4 +1,4 @@
-import { HomeContainer, ImageContainer, TextContainer, Text, AdoptButton, Grid, Image1, Image2} from "../Components/HomeContainer.styles"
+import { HomeContainer, ImageContainer, TextContainer, Text, AdoptButton, Grid, Image1, Image2} from "../Components/Styles/HomeContainer.styles"
 import {BsArrowRight} from 'react-icons/bs'
 
 

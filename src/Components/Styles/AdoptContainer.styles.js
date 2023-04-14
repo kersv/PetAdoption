@@ -16,14 +16,14 @@ height: calc(100vh - 4.6em);
 `
 
 const fadeIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+from {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
 `
 
 export const FilterContainer = styled.div`
@@ -71,11 +71,12 @@ padding: .5em;
 font-size: 1em;
 cursor: pointer;
 margin-right: 1em;
-transition: background-color 0.2s ease;
+background-color: rgba(255,255,255, .6);
+transition: background-color 0.5s ease;
 width: 50%;
 /* background-color: white; */
 &:hover {
-  background-color: #DCDCDC;
+  background-color: #FF9357;
 }
 `
 export const ClearAllButton = styled.button`
@@ -87,9 +88,10 @@ padding: .5em;
 font-size: 1em;
 cursor: pointer;
 margin-right: 1em;
-transition: background-color 0.2s ease;
+background-color: rgba(255,255,255, .6);
+transition: background-color 0.5s ease;
 &:hover {
-  background-color: #DCDCDC;
+  background-color: #FF9357;
 }
 @media screen and (max-width: 800px){
   margin-right: 0;
@@ -106,10 +108,11 @@ padding: .5em;
 margin-right: 1em;
 font-size: 1em;
 margin-bottom: .5em;
+background-color: rgba(255,255,255, .6);
 cursor: pointer;
-transition: background-color 0.2s ease;
+transition: background-color 0.5s ease;
 &:hover {
-  background-color: #DCDCDC;
+  background-color: #FF9357;
 }
 @media screen and (max-width: 800px){
   margin-right: 0;
@@ -118,7 +121,8 @@ transition: background-color 0.2s ease;
 
 export const Wrapper = styled.div`
 /* background-color: red; */
-background-color: white;
+/* background-color: white; */
+background-color: rgba(255,255,255, .6);
 border-radius: 4px;
 margin-right: 1em;
 overflow-y: auto;
@@ -187,7 +191,7 @@ display: flex;
 flex-direction: column;
 border-radius: 5px;
 height: 100%;
-background-color: white;
+background-color: rgba(255,255,255, .6);
 overflow: hidden;
 transform: translateZ(0);
 
